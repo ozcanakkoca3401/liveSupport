@@ -1,0 +1,23 @@
+/* 
+  Localizable.strings
+  
+
+  Created by Ozcan Akkoca on 7.01.2024.
+  
+*/
+
+// General
+"general_info" = "info";
+"general_error" = "Bir hata oluştu";
+"general_error_title" = "Hata";
+"general_ok_button" = "Tamam";
+"general_exit_button" = "Çıkış";
+"general_yes_button" = "Evet";
+"general_no_button" = "Hayır";
+"general_assistant_exit_confirmation" = "Asistanı kapatmak istediğinizden emin misiniz?";
+
+// LiveSupport
+"live_support_title" = "Asistan11";
+"live_support_order_number" = "Sipariş No:";
+"live_support_date" = "Tarih:";
+"live_support_select" = "Seç";
