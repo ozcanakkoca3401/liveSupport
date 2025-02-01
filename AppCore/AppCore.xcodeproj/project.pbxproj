@@ -11,7 +11,6 @@
 		691651C62D48F93E0064253E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 691651C22D48F93E0064253E /* SceneDelegate.swift */; };
 		691651CD2D48F9420064253E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 691651C82D48F9420064253E /* Assets.xcassets */; };
 		691651CE2D48F9420064253E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 691651CB2D48F9420064253E /* LaunchScreen.storyboard */; };
-		695DD8192D4E3DCE0011E1C7 /* HomeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 695DD8182D4E3DCE0011E1C7 /* HomeModule */; };
 		695DD81B2D4E3DD30011E1C7 /* LiveSupportModule in Frameworks */ = {isa = PBXBuildFile; productRef = 695DD81A2D4E3DD30011E1C7 /* LiveSupportModule */; };
 		69D2D7972D4E36D700927E07 /* LiveSuppportModule in Resources */ = {isa = PBXBuildFile; fileRef = 69D2D7962D4E36D700927E07 /* LiveSuppportModule */; };
 /* End PBXBuildFile section */
@@ -42,7 +41,6 @@
 		691651D12D48FAD60064253E /* CoreResource */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreResource; sourceTree = "<group>"; };
 		691651D52D49013E0064253E /* CoreNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreNetwork; sourceTree = "<group>"; };
 		691651D62D49016E0064253E /* CoreExtension */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CoreExtension; sourceTree = "<group>"; };
-		695DD8152D4E38730011E1C7 /* HomeModule */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HomeModule; sourceTree = "<group>"; };
 		696B4CF52D4930BC0046CB40 /* AppCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696B4CF62D4930BC0046CB40 /* AppCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		696B4CF72D4930BC0046CB40 /* AppCoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppCoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,7 +53,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				695DD81B2D4E3DD30011E1C7 /* LiveSupportModule in Frameworks */,
-				695DD8192D4E3DCE0011E1C7 /* HomeModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +138,6 @@
 		691651D72D4903E40064253E /* FeatureModules */ = {
 			isa = PBXGroup;
 			children = (
-				695DD8152D4E38730011E1C7 /* HomeModule */,
 				69D2D7962D4E36D700927E07 /* LiveSuppportModule */,
 			);
 			path = FeatureModules;
@@ -184,7 +180,6 @@
 			);
 			name = AppCore;
 			packageProductDependencies = (
-				695DD8182D4E3DCE0011E1C7 /* HomeModule */,
 				695DD81A2D4E3DD30011E1C7 /* LiveSupportModule */,
 			);
 			productName = AppCore;
@@ -638,10 +633,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		695DD8182D4E3DCE0011E1C7 /* HomeModule */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = HomeModule;
-		};
 		695DD81A2D4E3DD30011E1C7 /* LiveSupportModule */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LiveSupportModule;

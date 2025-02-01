@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import HomeModule
+import LiveSupportModule
 import CoreExtension
 import CoreResource
 
