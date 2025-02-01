@@ -104,7 +104,7 @@ private extension LiveSupportTableViewCell {
 
 // MARK: - LiveSupportSubItemDelegate
 extension LiveSupportTableViewCell: LiveSupportSubItemDelegate {
-    nonisolated func didSelectOption(_ view: LiveSupportSubItemView, index: Int) {
+    func didSelectOption(_ view: LiveSupportSubItemView, index: Int) {
         DispatchQueue.main.async {
             self.delegate?.didSelectOption(self, index: index)
         }

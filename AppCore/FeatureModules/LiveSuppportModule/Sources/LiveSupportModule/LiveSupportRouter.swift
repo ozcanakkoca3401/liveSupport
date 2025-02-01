@@ -17,14 +17,13 @@ public final class LiveSupportRouter {
 }
 
 extension LiveSupportRouter {
-    @MainActor
     public func start()  -> LiveSupportViewController {
         let viewController = initModule()
         self.moduleViewController = viewController
         return viewController
     }
     
-    @MainActor func initModule() -> LiveSupportViewController {
+    func initModule() -> LiveSupportViewController {
         let viewController = LiveSupportViewController()
         let interactor = LiveSupportInteractor()
         let presenter = LiveSupportPresenter(view: viewController,
@@ -38,8 +37,8 @@ extension LiveSupportRouter {
 }
 
 // MARK: - LiveSupportRouterProtocol
-extension LiveSupportRouter: @preconcurrency LiveSupportRouterProtocol {
-    @MainActor func openURLInSafari(url: URL) {
+extension LiveSupportRouter: LiveSupportRouterProtocol {
+    func openURLInSafari(url: URL) {
         guard UIApplication.shared.canOpenURL(url) else {
             return
         }
@@ -47,8 +46,6 @@ extension LiveSupportRouter: @preconcurrency LiveSupportRouterProtocol {
     }
     
     func closeApplication() {
-        DispatchQueue.main.async {
-            exit(0)
-        }
+        moduleViewController?.dismiss(animated: true)
     }
 }

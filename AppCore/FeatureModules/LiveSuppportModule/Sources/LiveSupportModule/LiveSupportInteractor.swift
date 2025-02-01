@@ -60,9 +60,7 @@ final class LiveSupportInteractor: LiveSupportInteractorProtocol {
     }
     
     func startMonitoringNetwork() {
-        Task {
-            await NetworkMonitoringManager.shared.startMonitoring()
-        }
+        NetworkMonitoringManager.shared.startMonitoring()
         
         NotificationCenter.default.addObserver(forName: networkStatusChangedNotification, object: nil, queue: .main) { [weak self] notification in
             if let status = notification.object as? Bool, !status {

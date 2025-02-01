@@ -84,7 +84,7 @@ private extension LiveSupportProductTableViewCell {
 
 // MARK: - LiveSupportProductItemViewDelegate
 extension LiveSupportProductTableViewCell: LiveSupportProductItemViewDelegate {
-    nonisolated func didSelectProduct(_ view: LiveSupportProductItemView) {
+    func didSelectProduct(_ view: LiveSupportProductItemView) {
         DispatchQueue.main.async {
             guard let index = self.scrollStackView.arrangedSubviews.firstIndex(of: view) else { return }
             self.delegate?.didSelectProduct(self, index: index)

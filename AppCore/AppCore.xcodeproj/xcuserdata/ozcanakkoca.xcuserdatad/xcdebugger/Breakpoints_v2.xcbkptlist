@@ -18,6 +18,52 @@
             endingLineNumber = "84"
             landmarkName = "webSocketDidFail(with:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B54E96FC-8201-4F41-AEE6-6906CE4F6ECD - cd2f172b7a5af805"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LiveSupportModule.LiveSupportInteractor.webSocketDidFail(with: CoreNetwork.WebSocketError) -&gt; ()"
+                  moduleName = "AppCore.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ozcanakkoca/Documents/GitHub/liveSupport/AppCore/FeatureModules/LiveSupportModule/LiveSupportModule/Sources/LiveSupportModule/LiveSupportInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84">
+               </Location>
+               <Location
+                  uuid = "B54E96FC-8201-4F41-AEE6-6906CE4F6ECD - 9f6cc942ca4b842d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LiveSupportModule.LiveSupportInteractor.webSocketDidFail(with: CoreNetwork.WebSocketError) -&gt; ()"
+                  moduleName = "LiveSupportModuleTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ozcanakkoca/Documents/GitHub/liveSupport/AppCore/FeatureModules/LiveSupportModule/LiveSupportModule/Sources/LiveSupportModule/LiveSupportInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28FBA456-93FB-470D-B666-363E74D297E3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FeatureModules/HomeModule/Sources/HomeModule/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "liveSupportTapped()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

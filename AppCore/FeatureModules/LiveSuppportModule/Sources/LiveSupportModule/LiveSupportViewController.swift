@@ -66,7 +66,7 @@ public final class LiveSupportViewController: UIViewController {
 
 // MARK: - LiveSupportViewProtocol
 extension LiveSupportViewController: LiveSupportViewProtocol {
-    nonisolated func handleOutput(_ output: LiveSupportPresenterOutput) {
+     func handleOutput(_ output: LiveSupportPresenterOutput) {
         DispatchQueue.main.async { [weak self] in
             self?.updateUIWithOutput(output)
         }
@@ -93,6 +93,16 @@ private extension LiveSupportViewController {
     func setupUI() {
         view.backgroundColor = CoreColors.white11
         view.addSubviewAndMakeConstraints(tableView)
+        
+        let closeButton = UIBarButtonItem(
+            image: UIImage(systemName: "xmark"),
+            style: .plain,
+            target: self,
+            action: #selector(closeButtonTapped)
+        )
+        
+        closeButton.tintColor = UIColor.white
+        navigationItem.rightBarButtonItem = closeButton
     }
     
     func applySnapshot(_ items: [LiveSupportMessageRowType]) {
@@ -162,7 +172,7 @@ extension LiveSupportViewController: UITableViewDataSource {
 
 // MARK: - LiveSupportProductTableViewCellDelegate
 extension LiveSupportViewController: LiveSupportProductTableViewCellDelegate {
-    nonisolated func didSelectProduct(_ cell: LiveSupportProductTableViewCell, index: Int) {
+    func didSelectProduct(_ cell: LiveSupportProductTableViewCell, index: Int) {
         DispatchQueue.main.async {
             if let indexPath = self.tableView.indexPath(for: cell) {
                 self.presenter.didSelectProduct(at: indexPath.row, optionIndex: index)
@@ -173,11 +183,18 @@ extension LiveSupportViewController: LiveSupportProductTableViewCellDelegate {
 
 // MARK: - LiveSupportTableViewCellDelegate
 extension LiveSupportViewController: LiveSupportTableViewCellDelegate {
-    nonisolated func didSelectOption(_ cell: LiveSupportTableViewCell, index: Int) {
+    func didSelectOption(_ cell: LiveSupportTableViewCell, index: Int) {
         DispatchQueue.main.async {
             if let indexPath = self.tableView.indexPath(for: cell) {
                 self.presenter.didSelectOption(at: indexPath.row, optionIndex: index)
             }
         }
+    }
+}
+
+// MARK: Actions
+private extension LiveSupportViewController {
+    @objc func closeButtonTapped() {
+        presenter.handleExitRequest()
     }
 }

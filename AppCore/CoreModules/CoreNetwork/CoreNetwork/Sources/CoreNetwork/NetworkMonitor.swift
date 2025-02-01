@@ -10,7 +10,7 @@ import Foundation
 
 public let networkStatusChangedNotification = Notification.Name("networkStatusChanged")
 
-public actor NetworkMonitoringManager {
+public class NetworkMonitoringManager {
     public static let shared = NetworkMonitoringManager()
     private let monitor = NWPathMonitor()
     private let queue = DispatchQueue.global(qos: .background)
@@ -18,8 +18,7 @@ public actor NetworkMonitoringManager {
     private init() {}
     
     public func startMonitoring() {
-        monitor.pathUpdateHandler = { [weak self] path in
-            guard let self = self else { return }
+        monitor.pathUpdateHandler = { path in
             let status = path.status == .satisfied
             NotificationCenter.default.post(name: networkStatusChangedNotification, object: status)
         }

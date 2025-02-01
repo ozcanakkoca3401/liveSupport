@@ -1,4 +1,4 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 5.7
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -7,13 +7,13 @@ private let rootPath = "../../"
 private let corePackagePath = "\(rootPath)CorePackages/"
 
 let package = Package(
-    name: "LiveSupportModule",
+    name: "HomeModule",
     platforms: [.iOS(.v15)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "LiveSupportModule",
-            targets: ["LiveSupportModule"]),
+            name: "HomeModule",
+            targets: ["HomeModule"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -31,30 +31,30 @@ let package = Package(
             name: "CoreExtension",
             path: "\(corePackagePath)CoreExtension"
         ),
+        
+        // MARK: - Feature Packages
+        .package(
+            name: "LiveSupportModule",
+            path: "LiveSupportModule"
+        ),
 
         // MARK: - Remote Packages
         .package(url: "https://github.com/SnapKit/SnapKit.git",
                  from: "5.0.1"),
-        .package(url: "https://github.com/onevcat/Kingfisher.git",
-            from: "7.8.1"),
 
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "LiveSupportModule",
+            name: "HomeModule",
             dependencies: [
                 "CoreNetwork",
                 "CoreResource",
                 "CoreExtension",
+                "LiveSupportModule",
                 "SnapKit",
-                "Kingfisher",
             ]),
-        .testTarget(
-                name: "LiveSupportModuleTests",
-                dependencies: ["LiveSupportModule"]),
 
     ]
 )
-

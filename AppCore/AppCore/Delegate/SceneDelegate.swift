@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import LiveSupportModule
+import HomeModule
 import CoreExtension
 import CoreResource
 
@@ -33,7 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     private func setupRootViewController() {
-        let initialViewController = LiveSupportRouter().start()
+        let initialViewController = HomeRouter().start()
         let navigationController = UINavigationController(rootViewController: initialViewController)
         window?.rootViewController = navigationController
     }
@@ -45,6 +45,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             titleColor: CoreColors.white11,
             tintColor: .blue
         )
+        
+        let navigationBar = UINavigationBar.appearance()
+        navigationBar.applyCustomStyle(
+            backgroundColor: CoreColors.purple11,
+            titleColor: CoreColors.white11,
+            tintColor: .blue)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
